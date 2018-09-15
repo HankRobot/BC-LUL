@@ -14,9 +14,6 @@ $(document).ready(function () {
 
     // Get a mosaicDefinitionMetaDataPair object with preloaded xem definition
     var mosaicDefinitionMetaDataPair = nem.model.objects.get("mosaicDefinitionMetaDataPair");
-    //var num_of_xem = document.getElementsBy('num_of_xem');
-    //console.log(num_of_xem[0].value);
-
 
 
     // Set default amount. In case of mosaic transfer the XEM amount works as a multiplier. (2 XEM will multiply by 2 the quantity of the mosaics you send)
@@ -24,9 +21,8 @@ $(document).ready(function () {
     $("#recipient").val("TAQLC2WUNAYC5WLTXJR52KT5I6M67VLSEQITFVMV");
     $("#namespaceId").val("lul_enterprise");
     $("#mosaicName").val("coconut");
-    $("#mosaicAmount").val("1");
     $("#privateKey").val("2ed8463c4a1b899f1cad9fad145de8a1aec1300601091512c09f750ba5758e13");
-
+    mosaicAmount = 5;
 	/**
      * Function to update our fee in the view
      */
@@ -54,6 +50,7 @@ $(document).ready(function () {
 	/**
      * Build transaction from form data and send
      */
+
     function send() {
         // Check form for errors
         if (!transferTransaction.mosaics.length) return alert('You must attach at least one mosaic !');
@@ -83,8 +80,21 @@ $(document).ready(function () {
         var transactionEntity = nem.model.transactions.prepare("mosaicTransferTransaction")(common, transferTransaction, mosaicDefinitionMetaDataPair, nem.model.network.data.testnet.id);
         console.log("GG.com", nem.utils.format.nemValue(transactionEntity.fee), nem.utils.format.nemValue(transactionEntity.data))
         // Serialize transfer transaction and announce
-        transactionEntity.fee = 100000;
 
+
+        if (mosaicAmount == 5) {
+            transactionEntity.fee = 300000;
+        }
+
+        else if (mosaicAmount == 10) {
+            transactionEntity.fee = 300000;
+        }
+        else {
+            transactionEntity.fee = 300000;
+        }
+        console.log("GG", mosaicAmount);
+
+        console.log("GG.com", nem.utils.format.nemValue(transactionEntity.fee), nem.utils.format.nemValue(transactionEntity.data))
 
         nem.model.transactions.send(common, transactionEntity, endpoint).then(function (res) {
             // If code >= 2, it's an error
@@ -102,14 +112,14 @@ $(document).ready(function () {
      * Function to attach a mosaic to the transferTransaction object
      */
     function attachMosaic() {
+        console.log("yyy" + mosaicAmount);
         // Check for form errors
-        if (undefined === $("#mosaicAmount").val() || !nem.utils.helpers.isTextAmountValid($("#mosaicAmount").val())) return alert('Invalid amount !');
+        if (undefined === mosaicAmount || !nem.utils.helpers.isTextAmountValid(mosaicAmount)) return alert('Invalid amount !');
         if (!$("#namespaceId").val() || !$("#mosaicName").val()) return alert('Missing parameter !');
 
         // If not XEM, fetch the mosaic definition from network
         if ($("#mosaicName").val() !== 'xem') {
             nem.com.requests.namespace.mosaicDefinitions(endpoint, $("#namespaceId").val()).then(function (res) {
-
                 // Look for the mosaic definition(s) we want in the request response (Could use ["eur", "usd"] to return eur and usd mosaicDefinitionMetaDataPairs)
                 var neededDefinition = nem.utils.helpers.searchMosaicDefinitionArray(res.data, [$("#mosaicName").val()]);
 
@@ -124,7 +134,8 @@ $(document).ready(function () {
                 mosaicDefinitionMetaDataPair[fullMosaicName].mosaicDefinition = neededDefinition[fullMosaicName];
 
                 // Now we have the definition we can calculate quantity out of user input
-                var quantity = nem.utils.helpers.cleanTextAmount($("#mosaicAmount").val()) * Math.pow(10, neededDefinition[fullMosaicName].properties[0].value);
+                var quantity = mosaicAmount * Math.pow(10, neededDefinition[fullMosaicName].properties[0].value);
+                console.log(mosaicAmount);
                 //var quantity = 2;			// Create a mosaic attachment
                 var mosaicAttachment = nem.model.objects.create("mosaicAttachment")($("#namespaceId").val(), $("#mosaicName").val(), quantity);
 
@@ -145,7 +156,7 @@ $(document).ready(function () {
                 });
         } else {
             // Calculate quantity from user input, XEM divisibility is 6
-            var quantity = nem.utils.helpers.cleanTextAmount($("#mosaicAmount").val()) * Math.pow(10, 6);
+            var quantity = nem.utils.helpers.cleanTextAmount(mosa) * Math.pow(10, 6);
 
             // Create a mosaic attachment
             var mosaicAttachment = nem.model.objects.create("mosaicAttachment")($("#namespaceId").val(), $("#mosaicName").val(), quantity);
@@ -188,3 +199,34 @@ $(document).ready(function () {
     updateFee();
 
 });
+
+
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var checkBox1 = document.getElementById("myCheck1");
+    var checkBox2 = document.getElementById("myCheck2");
+    mosaicAmount = 5;
+    console.log(mosaicAmount);
+    checkBox2.checked = false;
+    checkBox1.checked = false;
+}
+
+function myFunction1() {
+    var checkBox = document.getElementById("myCheck");
+    var checkBox1 = document.getElementById("myCheck1");
+    var checkBox2 = document.getElementById("myCheck2");
+    mosaicAmount = 10;
+    console.log(mosaicAmount);
+    checkBox2.checked = false;
+    checkBox.checked = false;
+}
+
+function myFunction2() {
+    var checkBox = document.getElementById("myCheck");
+    var checkBox1 = document.getElementById("myCheck1");
+    var checkBox2 = document.getElementById("myCheck2");
+    mosaicAmount = 20;
+    console.log(mosaicAmount);
+    checkBox.checked = false;
+    checkBox1.checked = false;
+}
