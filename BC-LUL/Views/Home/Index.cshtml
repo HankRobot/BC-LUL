@@ -3,63 +3,126 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Propcoin - Rethink Property Investment</h1>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/Views/Home/asset/css/main.css" />
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    <section id="header" class="dark">
+        <header>
+            <h1>Propcoin - Rethink Property Investment</h1>
+            <p>A free responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+        </header>
+        <footer>
+            <a href="#first" class="button scrolly">Proceed to second phase</a>
+        </footer>
+    </section>
+
+    <!-- First -->
+    <section id="first" class="main">
+        <header>
+            <div class="container">
+                <h2>Tessellate is a free responsive site template</h2>
+                <p>
+                    Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
+                    feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.
+                </p>
+            </div>
+        </header>
+        <div class="content dark style1 featured">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-12-narrow">
+                        <section>
+                            <span class="feature-icon"><span class="icon fa-clock-o"></span></span>
+                            <header>
+                                <h3>Gravida</h3>
+                            </header>
+                            <p>
+                                Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
+                                Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
+                                ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                                accumsan vivamus.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-4 col-12-narrow">
+                        <section>
+                            <span class="feature-icon"><span class="icon fa-bolt"></span></span>
+                            <header>
+                                <h3>Vivamus</h3>
+                            </header>
+                            <p>
+                                Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
+                                Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
+                                ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                                accumsan vivamus.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-4 col-12-narrow">
+                        <section>
+                            <span class="feature-icon"><span class="icon fa-cloud"></span></span>
+                            <header>
+                                <h3>Accumsan</h3>
+                            </header>
+                            <p>
+                                Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
+                                Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
+                                ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                                accumsan vivamus.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-12">
+                        <footer>
+                            <a href="#second" class="button scrolly">Gravida tempor lacinia</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
+<script src="~/Views/Home/asset/js/jquery.min.js"></script>
+<script src="~/Views/Home/asset/js/jquery.scrolly.min.js"></script>
+<script src="~/Views/Home/asset/js/browser.min.js"></script>
+<script src="~/Views/Home/asset/js/breakpoints.min.js"></script>
+<script src="~/Views/Home/asset/js/util.js"></script>
+<script src="~/Views/Home/asset/js/main.js"></script>
 
 <script src="~/Scripts/nem-sdk.js"></script>
-<script>
-    // Include the library
-    var nem = require("nem-sdk").default;
-    console.log(nem);
+@*<script>
+        // Include the library
+        var nem = require("nem-sdk").default;
+        console.log(nem);
 
-    // Create an NIS endpoint object
-    var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
+        // Create an NIS endpoint object
+        var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
 
-    // Create a common object holding key
-    var common = nem.model.objects.create("common")("", "2ed8463c4a1b899f1cad9fad145de8a1aec1300601091512c09f750ba5758e13");
+        // Create a common object holding key
+        var common = nem.model.objects.create("common")("", "2ed8463c4a1b899f1cad9fad145de8a1aec1300601091512c09f750ba5758e13");
 
-    // Simulate the file content
-    var fileContent = nem.crypto.js.enc.Utf8.parse('Apostille is awesome !');
+        // Simulate the file content
+        var fileContent = nem.crypto.js.enc.Utf8.parse('Apostille is awesome !');
 
-    // Create the apostille
-    var apostille = nem.model.apostille.create(common, "Test.txt", fileContent, "Test Apostille", nem.model.apostille.hashing["SHA256"], false, "", true, nem.model.network.data.testnet.id);
+        // Create the apostille
+        var apostille = nem.model.apostille.create(common, "Test.txt", fileContent, "Test Apostille", nem.model.apostille.hashing["SHA256"], false, "", true, nem.model.network.data.testnet.id);
 
-    // Serialize transfer transaction and announce
-    nem.model.transactions.send(common, apostille.transaction, endpoint).then(function (res) {
-        // If code >= 2, it's an error
-        if (res.code >= 2) {
-            console.error(res.message);
-        } else {
-            console.log("\nTransaction: " + res.message);
-            console.log("\nCreate a file with the fileContent text and name it:\n" + apostille.data.file.name.replace(/\.[^/.]+$/, "") + " -- Apostille TX " + res.transactionHash.data + " -- Date DD/MM/YYYY" + "." + apostille.data.file.name.split('.').pop());
-            console.log("When transaction is confirmed the file should audit successfully in Nano");
-            console.log("\nYou can also take the following hash: " + res.transactionHash.data + " and put it into the audit.js example");
-        }
-    }, function (err) {
-        console.error(err);
-    });
-</script>
+        // Serialize transfer transaction and announce
+        nem.model.transactions.send(common, apostille.transaction, endpoint).then(function (res) {
+            // If code >= 2, it's an error
+            if (res.code >= 2) {
+                console.error(res.message);
+            } else {
+                console.log("\nTransaction: " + res.message);
+                console.log("\nCreate a file with the fileContent text and name it:\n" + apostille.data.file.name.replace(/\.[^/.]+$/, "") + " -- Apostille TX " + res.transactionHash.data + " -- Date DD/MM/YYYY" + "." + apostille.data.file.name.split('.').pop());
+                console.log("When transaction is confirmed the file should audit successfully in Nano");
+                console.log("\nYou can also take the following hash: " + res.transactionHash.data + " and put it into the audit.js example");
+            }
+        }, function (err) {
+            console.error(err);
+        });
+    </script>*@
