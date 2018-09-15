@@ -5,13 +5,14 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>BC LUL - Propcoin</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<head>
+    <title>BC LUL - Propcoin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+</head>
+    <body class="is-preload">
 
         <!-- Header -->
         <section id="header" class="dark">
@@ -80,6 +81,7 @@
 					</div>
 				</div>
 			</section>
+
 
 
         <!-- Second -->
@@ -197,7 +199,7 @@
                                 consequat lorem ipsum consequat feugiat sed tempus euismod feugiat veroeros.
                             </p>
                             <footer>
-                                <a href="#fourth" class="button scrolly">Ipsum ornare lorem dolor</a>
+                                <a href="#fourth" class="button scrolly">Perform your Transactions here</a>
                             </footer>
                         </div>
                     </div>
@@ -369,6 +371,80 @@
         </section>
 
         <!-- Footer -->
+        <div class="jumbotron text-center">
+            <h1>Prop Coins Transaction</h1>
+        </div>
+
+        <div class="col-md-12">
+            <div id="transfer" class="col-md-8" style="border: 1px solid #444;padding: 20px;overflow: auto;">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <fieldset>
+                            <label>Recipient</label>
+                            <input class="form-control" type="text" id="recipient" />
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <label>Amount</label>
+                            <input class="form-control" type="text" id="amount" readOnly />
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <label>Message</label>
+                            <textarea class="form-control" rows="5" cols="25" id="message"></textarea>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <fieldset>
+                            <label>Fee</label>
+                            <p class="form-control-static" type="text">
+                                <span id="fee">
+                                </span> <small><b>XEM</b></small>
+                            </p>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <label>Namespace of Property</label>
+                            <input class="form-control" type="text" id="namespaceId" placeholder="lul_enterprise" />
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <label>Amount of Prop Coins</label>
+                            <input class="form-control" type="text" id="mosaicAmount" />
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <button class="btn btn-success" style="width:100%;" id="attachMosaic">Attach mosaic</button>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <fieldset>
+                            <label>Private key</label>
+                            <input class="form-control" type="password" id="privateKey" />
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <button class="btn btn-success" style="width:100%;" id="send">Send</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div id="mosaicAttached" class="col-md-3" style="margin-left: 20px;border: 1px solid #444;padding: 20px;overflow: auto;">
+                <label>Mosaic Attached</label>
+                <ul id="mosaicList"></ul>
+            </div>
+        </div>
+
         <section id="footer">
             <ul class="icons">
                 <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -392,6 +468,12 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <!-- NEM Scripts-->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="nem-sdk.js"></script>
+        <script src="script.js"></script>
 
     </body>
 </html>
