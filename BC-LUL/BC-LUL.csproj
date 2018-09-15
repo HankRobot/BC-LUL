@@ -162,8 +162,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\create.js" />
-    <Content Include="Scripts\nem-sdk.js" />
+    <Content Include="Scripts\NEM\audit.js" />
+    <Content Include="Scripts\NEM\create.js" />
+    <Content Include="Scripts\createMosaic.js" />
+    <Content Include="Scripts\NEM\mosaicTransfer.js" />
+    <Content Include="Scripts\NEM\nem-sdk.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -180,6 +183,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+<<<<<<< HEAD
     <Content Include="Views\Home\asset\css\font-awesome.min.css" />
     <Content Include="Views\Home\asset\css\images\arrow.svg" />
     <Content Include="Views\Home\asset\css\images\bgbl.svg" />
@@ -208,6 +212,12 @@
     <Content Include="Views\Home\images\pic07.jpg" />
     <Content Include="Views\Home\images\Residensi-Ledang.jpg" />
     <Content Include="Views\Home\index_sample.html" />
+=======
+    <Content Include="Scripts\requests.js" />
+    <Content Include="Scripts\NEM\transfer.js" />
+    <Content Include="Scripts\NEM\verifySignature.js" />
+    <Content Include="Scripts\NEM\webSockets.js" />
+>>>>>>> 064f243720a7fe4f8a05081264a7c29cd4dea4ec
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
