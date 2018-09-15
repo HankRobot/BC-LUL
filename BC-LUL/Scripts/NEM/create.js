@@ -1,6 +1,3 @@
-// Include the library
-var nem = require("../../../build/index.js").default;
-
 // Create an NIS endpoint object
 var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
 

@@ -34,13 +34,12 @@
 <script>
     // Include the library
     var nem = require("nem-sdk").default;
-    console.log(nem);
 
     // Create an NIS endpoint object
     var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
 
     // Create a common object holding key
-    var common = nem.model.objects.create("common")("", "2ed8463c4a1b899f1cad9fad145de8a1aec1300601091512c09f750ba5758e13");
+    var common = nem.model.objects.create("common")("", "privateKey");
 
     // Simulate the file content
     var fileContent = nem.crypto.js.enc.Utf8.parse('Apostille is awesome !');
@@ -62,4 +61,5 @@
     }, function (err) {
         console.error(err);
     });
+    
 </script>
