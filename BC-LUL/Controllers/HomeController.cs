@@ -26,5 +26,10 @@ namespace BC_LUL.Controllers
 
             return View();
         }
+
+        public ActionResult NEMtest()
+        {
+            return null;
+        }
     }
 }
