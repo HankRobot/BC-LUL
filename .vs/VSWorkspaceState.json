@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BC-LUL-Website",
-    "\\BC-LUL-Website\\assets",
-    "\\BC-LUL-Website\\assets\\css",
-    "\\BC-LUL-Website\\images"
+    "\\BC-LUL-Website\\assets"
   ],
-  "SelectedNode": "\\BC-LUL-Website\\script.js",
+  "SelectedNode": "\\transactscript.js",
   "PreviewInSolutionExplorer": false
 }
