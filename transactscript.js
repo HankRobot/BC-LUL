@@ -11,9 +11,12 @@ $(document).ready(function () {
 
 	// Get an empty common object to hold pass and key
 	var common = nem.model.objects.get("common");
+	
+	$("#recipient").val("TAYE5S_NX5Q74WY5EQ252PXDGGKSG5EX3V2CCMKFD");
+	$("#amount").val("5");
+	$("#message").val("INV_UEM_000ac18e8f3");
 
 	// Set default amount in view. It is text input so we can handle dot and comma as decimal mark easily (need cleaning but provided by the library)
-	$("#amount").val("0");
 
 	/**
      * Function to update our fee in the view
@@ -72,7 +75,7 @@ $(document).ready(function () {
 			if (res.code >= 2) {
 				alert(res.message);
 			} else {
-				alert(res.message);
+				alert("Order received successfully!");
 			}
 		}, function(err) {
 			alert(err);

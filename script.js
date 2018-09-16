@@ -23,6 +23,8 @@ $(document).ready(function () {
     $("#mosaicName").val("coconut");
     $("#privateKey").val("2ed8463c4a1b899f1cad9fad145de8a1aec1300601091512c09f750ba5758e13");
     mosaicAmount = 5;
+	var hidebutt = document.getElementById("payment");
+	hidebutt.setAttribute("style","visibility:hidden");
 	/**
      * Function to update our fee in the view
      */
@@ -188,6 +190,7 @@ $(document).ready(function () {
     // Call send function when click on send button
     $("#send").click(function () {
         send();
+		myFunctionButt();
     });
 
     // Call attachMosaic function when click on attachMosaic button
@@ -230,3 +233,12 @@ function myFunction2() {
     checkBox.checked = false;
     checkBox1.checked = false;
 }
+
+function myFunctionButt() {
+	var hidenode = document.getElementById("transfer");
+	var showbutt = document.getElementById("payment");
+	hidenode.setAttribute("style","visibility:hidden");
+	showbutt.setAttribute("style","visibility:visible");
+
+}
+

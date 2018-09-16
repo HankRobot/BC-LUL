@@ -5,26 +5,28 @@
 
 <body>
     <div class="jumbotron text-center">
-        <h1>Transfer</h1>
+        <h1>Payment Gateway</h1>
+		<p>Please pay within 30 minutes to avoid cancellation</p>
     </div>
     <div id="transfer" style="width: 850px;margin: auto;border: 1px solid #444;padding: 20px;overflow: auto;">
         <div class="col-md-6">
             <div class="form-group">
                 <fieldset>
-                    <label>Recipient</label>
-                    <input class="form-control" type="text" id="recipient" />
+                    <label>I agree to pay to:</label>
+                    <input class="form-control" type="text" id="recipient" readOnly/>
                 </fieldset>
             </div>
             <div class="form-group">
                 <fieldset>
                     <label>Amount</label>
-                    <input class="form-control" type="text" id="amount" />
+                    <input class="form-control" type="text" id="amount" readOnly/>
+					<label>XEM</label>
                 </fieldset>
             </div>
             <div class="form-group">
                 <fieldset>
-                    <label>Message</label>
-                    <textarea class="form-control" rows="5" cols="25" id="message"></textarea>
+                    <label>Notes:</label>
+                    <textarea class="form-control" type="text" id="amount" id="message"></textarea>
                 </fieldset>
             </div>
         </div>
@@ -40,7 +42,7 @@
             </div>
             <div class="form-group">
                 <fieldset>
-                    <label>Private key</label>
+                    <label>Enter your Private key to pay:</label>
                     <input class="form-control" type="password" id="privateKey" />
                 </fieldset>
             </div>
