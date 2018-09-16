@@ -12,7 +12,7 @@ $(document).ready(function () {
 	// Get an empty common object to hold pass and key
 	var common = nem.model.objects.get("common");
 	
-	$("#recipient").val("TAYE5S_NX5Q74WY5EQ252PXDGGKSG5EX3V2CCMKFD");
+	$("#recipient").val("TAYE5SNX5Q74WY5EQ252PXDGGKSG5EX3V2CCMKFD");
 	$("#amount").val("5");
 	$("#message").val("INV_UEM_000ac18e8f3");
 
