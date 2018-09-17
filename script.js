@@ -21,7 +21,8 @@ $(document).ready(function () {
     $("#recipient").val("TAQLC2WUNAYC5WLTXJR52KT5I6M67VLSEQITFVMV");
     $("#namespaceId").val("lul_enterprise");
     $("#mosaicName").val("coconut");
-    $("#privateKey").val("2ed8463c4a1b899f1cad9fad145de8a1aec1300601091512c09f750ba5758e13");
+    $("#privateKey").val("ABC");
+	//2ed8463c4a1b899f1cad9fad145de8a1aec1300601091512c09f750ba5758e13
     mosaicAmount = 5;
 	var hidebutt = document.getElementById("payment");
 	hidebutt.setAttribute("style","visibility:hidden");
@@ -189,7 +190,9 @@ $(document).ready(function () {
 
     // Call send function when click on send button
     $("#send").click(function () {
-        send();
+        alert("NEM Transaction disabled until final version is released");
+		alert("The next page will be a simulated certificated issuance");
+		//send();
 		myFunctionButt();
     });
 
