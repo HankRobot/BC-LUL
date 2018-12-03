@@ -2183,6 +2183,10 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
+		#header header p span{
+			background-color: rgba(128, 128, 128, 0.4);
+		}
+
 		#header header p {
 			margin-top: 1.25em;
 			font-weight: 100;
@@ -2203,6 +2207,7 @@ input, select, textarea {
 	margin: 0;
 	background-image: url("images/overlay.png"), url("../../images/paperwork.png");
 	background-size: auto, cover;
+	
 	background-position: top left, center center;
 	background-repeat: repeat, no-repeat;
 	padding: 14em 0 14em 0;
@@ -2214,6 +2219,20 @@ input, select, textarea {
 		font-size: 4.25em;
 		line-height: 1.25em;
 		margin-bottom: 0;
+	}
+
+	#body header h1 span{
+		background-color: rgba(128, 128, 128, 0.4);
+	}
+
+	#body header h2 {
+		font-size: 1.50em;
+		font-weight: 100;
+		margin-bottom: 0;
+	}
+
+	#body header h2 span{
+		background-color: rgba(128, 128, 128, 0.4);
 	}
 
 	#body header p {
