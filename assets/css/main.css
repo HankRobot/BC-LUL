@@ -122,7 +122,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #666;
+		color:white;
 		margin: 0 0 1em 0;
 		font-weight: 100;
 		line-height: 1.5em;
@@ -2243,6 +2243,45 @@ input, select, textarea {
 		padding-top: 1.5em;
 	}
 
+/* property */
+#property {
+	position: relative;
+	margin: 0;
+	background-image: url("images/overlay.png"), url("../../images/Melia_Thumbnail.jpg");
+	background-size: auto, cover;
+	background-position: top left, center center;
+	background-repeat: repeat, no-repeat;
+	padding: 14em 0 14em 0;
+	text-align: center;
+	color: #fff;
+}
+
+	#property header h1 {
+		font-size: 4.25em;
+		line-height: 1.25em;
+		margin-bottom: 0;
+	}
+
+	#property header h1 span{
+		background-color: rgba(128, 128, 128, 0.4);
+	}
+
+	#property header p span{
+		background-color: rgba(128, 128, 128, 0.4);
+	}
+
+	#property header p {
+		margin-top: 1.25em;
+		font-weight: 100;
+		padding: 0;
+		font-size: 1.25em;
+		line-height: 1.5em;
+		text-align: center;
+	}
+
+	#property footer {
+		padding-top: 1.5em;
+	}
 /* Main Sections */
 #particles-js {
 	position: absolute;
