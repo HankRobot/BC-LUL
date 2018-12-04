@@ -2202,15 +2202,13 @@ input, select, textarea {
 			padding-top: 1.5em;
 		}
 
-
-/* Header */
+/* body */
 
 #body {
 	position: relative;
 	margin: 0;
 	background-image: url("images/overlay.png"), url("../../images/paperwork.png");
 	background-size: auto, cover;
-	
 	background-position: top left, center center;
 	background-repeat: repeat, no-repeat;
 	padding: 14em 0 14em 0;
@@ -2228,13 +2226,7 @@ input, select, textarea {
 		background-color: rgba(128, 128, 128, 0.4);
 	}
 
-	#body header h2 {
-		font-size: 1.50em;
-		font-weight: 100;
-		margin-bottom: 0;
-	}
-
-	#body header h2 span{
+	#body header p span{
 		background-color: rgba(128, 128, 128, 0.4);
 	}
 
@@ -2255,7 +2247,8 @@ input, select, textarea {
 #particles-js {
 	position: absolute;
     left: 0;
-    top: 0;
+	top: 0;
+	height:100%;
   	width: 100%;
   	background-color: rgb(131, 144, 155);
   	background-image: url("");
