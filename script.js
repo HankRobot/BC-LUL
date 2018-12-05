@@ -39,7 +39,7 @@ $(document).ready(function () {
 
 		// Prepare the updated transfer transaction object
 		var transactionEntity = nem.model.transactions.prepare("mosaicTransferTransaction")(common, transferTransaction, mosaicDefinitionMetaDataPair, nem.model.network.data.testnet.id);
-		console.log(mosaicDefinitionMetaDataPair);
+		//console.log(mosaicDefinitionMetaDataPair);
 		// Format fee returned in prepared object
 
 		console.log(nem.utils.format.nemValue(transactionEntity.fee) + " helllllooooooe "+transactionEntity);
