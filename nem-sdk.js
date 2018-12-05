@@ -530,7 +530,7 @@ var lastBlock = function lastBlock(endpoint) {
 var time = function time(endpoint) {
 	// Configure the request
 	var options = {
-		url: _helpers2.default.formatEndpoint(endpoint) + '/time-sync/network-time',
+		url: _helpers2.default.formatEndpoint(endpoint) + 'ip:7890//time-sync/network-time',///time-sync/network-time
 		method: 'GET'
 		// Send the request
 	};return (0, _send2.default)(options);
