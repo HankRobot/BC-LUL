@@ -2243,6 +2243,38 @@ input, select, textarea {
 		padding-top: 1.5em;
 	}
 
+/* body2 */
+#body2 {
+	position: relative;
+	margin: 0;
+	background-image: url("images/overlay.png"), url("../../images/trace.png");
+	background-size: auto, cover;
+	background-position: top left, center center;
+	background-repeat: repeat, no-repeat;
+	padding: 14em 0 14em 0;
+	text-align: center;
+	color: #fff;
+}
+
+	#body2 header h1 {
+		font-size: 4.25em;
+		line-height: 1.25em;
+		margin-bottom: 0;
+	}
+
+	#body2 header p {
+		margin-top: 1.25em;
+		font-weight: 100;
+		padding: 0;
+		font-size: 1.25em;
+		line-height: 1.5em;
+		text-align: center;
+	}
+
+	#body2 footer {
+		padding-top: 1.5em;
+	}
+
 /* property */
 #property {
 	position: relative;
@@ -2282,6 +2314,7 @@ input, select, textarea {
 	#property footer {
 		padding-top: 1.5em;
 	}
+
 /* Main Sections */
 #particles-js {
 	position: absolute;
