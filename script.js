@@ -122,6 +122,7 @@ $(document).ready(function () {
 		console.log("some other part to debug");
 		// If not XEM, fetch the mosaic definition from network
 		if($("#mosaicName").val() !== 'xem') {
+			console.log("it went here");
 			nem.com.requests.namespace.mosaicDefinitions(endpoint, $("#namespaceId").val()).then(function(res) {
 				// Look for the mosaic definition(s) we want in the request response (Could use ["eur", "usd"] to return eur and usd mosaicDefinitionMetaDataPairs)
 				var neededDefinition = nem.utils.helpers.searchMosaicDefinitionArray(res.data, [$("#mosaicName").val()]);
@@ -159,6 +160,7 @@ $(document).ready(function () {
 				alert(err);
 			});
 		} else {
+			console.log("THE LAST RESORT");
 			// Calculate quantity from user input, XEM divisibility is 6
 			var quantity = nem.utils.helpers.cleanTextAmount(mosa) * Math.pow(10, 6);
 			
