@@ -137,6 +137,7 @@ $(document).ready(function () {
 
 				// Now we have the definition we can calculate quantity out of user input
 				var quantity = mosaicAmount * Math.pow(10, neededDefinition[fullMosaicName].properties[0].value);
+				console.log(quantity)
 				console.log(mosaicAmount);
 				//var quantity = 2;			// Create a mosaic attachment
 				var mosaicAttachment = nem.model.objects.create("mosaicAttachment")($("#namespaceId").val(), $("#mosaicName").val(), quantity);
