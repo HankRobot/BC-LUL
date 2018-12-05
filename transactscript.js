@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	// Load nem-browser library
+	// Load nem-browser library and fuck this
 	var nem = require("nem-sdk").default;
 
     // Create an NIS endpoint object
