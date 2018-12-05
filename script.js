@@ -119,7 +119,7 @@ $(document).ready(function () {
 		if(undefined === mosaicAmount || !nem.utils.helpers.isTextAmountValid(mosaicAmount)) return alert('Invalid amount !');
 		console.log("if(undefined === mosaicAmount || !nem.utils.helpers.isTextAmountValid(mosaicAmount)) return alert('Invalid amount !');")
 		if(!$("#namespaceId").val() || !$("#mosaicName").val()) return alert('Missing parameter !');
-
+		console.log("some other part to debug");
 		// If not XEM, fetch the mosaic definition from network
 		if($("#mosaicName").val() !== 'xem') {
 			nem.com.requests.namespace.mosaicDefinitions(endpoint, $("#namespaceId").val()).then(function(res) {
