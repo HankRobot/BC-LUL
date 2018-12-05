@@ -2330,6 +2330,20 @@ input, select, textarea {
   	z-index: -1;
 }
 
+#particles-js2 {
+	position: absolute;
+    left: 0;
+	top: 0;
+	height:100%;
+  	width: 100%;
+  	background-color: rgb(131, 144, 155);
+  	background-image: url("");
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: 50% 50%;
+  	z-index: -1;
+}
+
 #inside {
   position: relative;
   z-index: 99999;
