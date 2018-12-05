@@ -199,7 +199,7 @@ $(document).ready(function () {
 	});
 
 	// Initialization of fees in view
-	//updateFee();
+	updateFee();
 
 });
 
