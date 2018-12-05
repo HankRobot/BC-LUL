@@ -117,6 +117,7 @@ $(document).ready(function () {
 		console.log("yyy"+mosaicAmount);
 		// Check for form errors
 		if(undefined === mosaicAmount || !nem.utils.helpers.isTextAmountValid(mosaicAmount)) return alert('Invalid amount !');
+		console.log("if(undefined === mosaicAmount || !nem.utils.helpers.isTextAmountValid(mosaicAmount)) return alert('Invalid amount !');")
 		if(!$("#namespaceId").val() || !$("#mosaicName").val()) return alert('Missing parameter !');
 
 		// If not XEM, fetch the mosaic definition from network
@@ -124,7 +125,7 @@ $(document).ready(function () {
 			nem.com.requests.namespace.mosaicDefinitions(endpoint, $("#namespaceId").val()).then(function(res) {
 				// Look for the mosaic definition(s) we want in the request response (Could use ["eur", "usd"] to return eur and usd mosaicDefinitionMetaDataPairs)
 				var neededDefinition = nem.utils.helpers.searchMosaicDefinitionArray(res.data, [$("#mosaicName").val()]);
-
+				console.log(neededDefinition);
 				// Get full name of mosaic to use as object key
 				var fullMosaicName  = $("#namespaceId").val() + ':' + $("#mosaicName").val();
 				console.log(fullMosaicName);
