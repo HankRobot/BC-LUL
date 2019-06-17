@@ -94,9 +94,9 @@ $(document).ready(function () {
 		else {
 			transactionEntity.fee = 300000;
 		}
-		console.log("GG", mosaicAmount);
+		console.log("Mosaic Ammount: ", mosaicAmount);
 
-		console.log("GG.com", nem.utils.format.nemValue(transactionEntity.fee), nem.utils.format.nemValue(transactionEntity.data))
+		console.log("Fee and Data: ", nem.utils.format.nemValue(transactionEntity.fee), nem.utils.format.nemValue(transactionEntity.data))
 
 		nem.model.transactions.send(common, transactionEntity, endpoint).then(function(res){
 			// If code >= 2, it's an error
@@ -114,7 +114,7 @@ $(document).ready(function () {
      * Function to attach a mosaic to the transferTransaction object
      */
 	function attachMosaic() {
-		console.log("yyy"+mosaicAmount);
+		console.log("Mosaic Ammount"+mosaicAmount);
 		// Check for form errors
 		if(undefined === mosaicAmount || !nem.utils.helpers.isTextAmountValid(mosaicAmount)) return alert('Invalid amount !');
 		console.log("if(undefined === mosaicAmount || !nem.utils.helpers.isTextAmountValid(mosaicAmount)) return alert('Invalid amount !');")
